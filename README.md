@@ -1,54 +1,70 @@
-# フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門
+# Getting Started with Create React App
 
-## 説明
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-* 本リポジトリはUdemyの「[フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門](https://www.udemy.com/react-application-development/?couponCode=GITHUB-REPO-README)」コースで扱うソースコードを管理するためのものです。
-* アプリケーションが動作する最新の状態を確認する場合は、以下のコマンドで`latest`ブランチをcheckout してください。
-    ```bash
-    $ git checkout -t origin/latest
-    ```
-* コース内ではレクチャー終了時にブランチをコミットしている場合があります。
-* 特定のブランチをチェックアウトしたい場合も以下のようにcheckoutしてご確認頂けます。
-    ```bash
-    # e.g.) redux-basics ブランチをcheckoutする場合
-    $ git checkout -t origin/redux-basics
-    ```
-* 各ブランチが時系列にどう履歴を残してきたのかを確認するには下記コマンドが有効です。必要に応じてご確認ください。
-    ```bash
-    $ git log --oneline --abbrev-commit --all
-    ```
-* その他、ご不明な点がありましたら、遠慮なくUdemyの[Q&A](https://www.udemy.com/react-application-development/learn/v4/questions)でお問い合わせください。
+## Available Scripts
 
+In the project directory, you can run:
 
-## 動画コース一覧
+### `npm start`
 
-他にも以下のコースをUdemyにて公開中です。
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-|タイトル|概要|
-|---|---|
-|[フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門](https://www.udemy.com/react-application-development/?couponCode=GITHUB-REPO-README)|RESTful APIサーバと連携する実践的なCRUDアプリケーション開発手法を学び、今後のフロントエンドWeb開発の標準になり得るReact・Reduxアプリケーション開発をマスターし、もう一段階上のJavsScriptエンジニアになろう|
-|[GraphQL with React入門 - QueryとMutationを学びPaginationの実装にチャレンジ！](https://www.udemy.com/graphql-with-react/?couponCode=GITHUB-README-FOOTER)|GraphQLの言語仕様を学習し、GitHubのGraphQL APIと連携するReactアプリケーションの実装にチャレンジします！React/GraphQL/Apollo等を利用し、近未来を見据えたAPI開発手法を先取りしよう！|
-|[モジュールバンドラーwebpackを1日で習得！しかもフルスクラッチでインストールからカスタマイズまでの手順を理解する](https://www.udemy.com/webpack-crash-course/?couponCode=GITHUB-README-FOOTER)|Reactを題材にし各種形式のモジュールをローダー(babel/css/sass/html/eslint)やプラグイン(JS圧縮のカスタム/CSSのファイル分離と圧縮)でバンドルする方法をハンズオンで解説、今回もGitHubにソース完全公開|
-|[React Hooks 入門 - HooksとReduxを組み合わせて最新のフロントエンド状態管理手法を習得しよう！](https://www.udemy.com/react-hooks-101/?couponCode=GITHUB-README-FOOTER)|Vue.js Firebase Docker Gatsby などを抑え、なんと受講生の37.2%が次に学びたいと注目度の高い React Hooks 。複雑な状態管理をシンプルに且つ美しく実装するためのフロントエンド開発手法を身につけよう！|
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<div align='right'>
-Dive into Hacking!
-</div>
-<div align='right'>
-Udemy プログラミング講師
-</div>
-<div align='right'>
+### `npm run eject`
 
-[はむ - プログラミングおじさん](https://www.udemy.com/user/76100880-5658-4a37-be77-5525d39a4726/)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-</div>
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
