@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
+//関数になってる!?
 function App() {
   return (
     <div className="App">

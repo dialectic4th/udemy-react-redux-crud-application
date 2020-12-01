@@ -23,8 +23,12 @@ $ yarn --version
 $ git checkout -b hello-world
 $ yarn global add create-react-app
 $ create-react-app .
-$ npm start
+$ yarn run start 
 http://localhost:3000/
+$ vim src App.js
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+          <br></br>
+          Hello World(by Editor)
+        </p>
 ```
-
-
