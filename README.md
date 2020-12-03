@@ -8,7 +8,7 @@
   - https://qiita.com/senou/items/d939601e32c0005ebfe3
   - https://classic.yarnpkg.com/ja/docs/usage/
 
-```
+```zsh
 $ nodebrew install 10.14.2
 $ nodebrew use 10.14.2
 $ node -v
@@ -19,7 +19,7 @@ $ yarn --version
 ```
 
 ## create-react-app
-```
+```zsh
 $ git checkout -b hello-world
 $ yarn global add create-react-app
 $ create-react-app .
@@ -31,4 +31,30 @@ $ vim src App.js
           <br></br>
           Hello World(by Editor)
         </p>
+```
+
+
+## JSX
+- Javascript XMLの略
+- Reactで用いられるテンプレート言語
+- トランスパイラーによって、Javascriptに変換される。
+- JSXで書くほうが直感的で楽（らしい）
+```js
+//JSX
+function App() {
+  return (
+    <div className="App">Hello World(by Editor)</div>
+  );
+}
+
+class App extends Component{
+  render() {
+    return React.createElement(
+        "div",
+        null,
+        "Hello World(by Editor)"
+    );
+  }
+}
+export default App;
 ```
