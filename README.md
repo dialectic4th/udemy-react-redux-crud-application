@@ -2,6 +2,8 @@
 - npmよりもyarnの方が信頼度が高い(らしい)
 - nodebrew,node,yarnの依存関係（っぽい）
 - yarnはプロジェクト単位で管理できるJSのパッケージ管理ツール（らしい）
+- 講義とバージョンは揃える
+- (これ)
 - 参考
   - https://qiita.com/morikiyo/items/cd219a0b7aaed5b23d51
   - https://qiita.com/chihiro/items/13652c461519f8922f56
@@ -16,13 +18,16 @@ $ node -v
 $ npm install --global yarn
 $ yarn --version
 1.22.10
+
 ```
 
 ## create-react-app
+- branch:more-jsxからVersionを合わせて再作成
 ```zsh
 $ git checkout -b hello-world
 $ yarn global add create-react-app
-$ create-react-app .
+# $ create-react-app .
+$ npx create-react-app --scripts-version 1.1.1 .
 $ yarn run start 
 http://localhost:3000/
 $ vim src App.js
@@ -35,10 +40,21 @@ $ vim src App.js
 
 
 ## JSX
+### JSXとは
 - Javascript XMLの略
 - Reactで用いられるテンプレート言語
 - トランスパイラーによって、Javascriptに変換される。
-- JSXで書くほうが直感的で楽（らしい）
+- JSXで書くほうが直感的だったり色々と楽らしい（らしい）
+
+### なぜJSXを用いるのか
+- https://reactjs.org/docs/introducing-jsx.html
+```
+React doesn’t require using JSX, 
+but most people find it helpful as a visual aid when working with UI inside the JavaScript code. 
+It also allows React to show more useful error and warning messages.
+```
+
+### コード例
 ```js
 //JSX
 function App() {
