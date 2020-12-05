@@ -3,7 +3,7 @@
 - nodebrew,node,yarnの依存関係（っぽい）
 - yarnはプロジェクト単位で管理できるJSのパッケージ管理ツール（らしい）
 - 講義とバージョンは揃える
-- (これもしやFight Reactになってしまうのでは・・・？)
+- (これもしや`Fight React Framework`になってしまうのでは・・・？要検討)
 - 参考
   - https://qiita.com/morikiyo/items/cd219a0b7aaed5b23d51
   - https://qiita.com/chihiro/items/13652c461519f8922f56
@@ -49,6 +49,7 @@ $ vim src App.js
 - Reactで用いられるテンプレート言語
 - トランスパイラーによって、Javascriptに変換される。
 - JSXで書くほうが直感的だったり色々と楽らしい（らしい）
+- React、JSX共にFacebook製（TypescriptはMicroSoft製）
 
 ### なぜJSXを用いるのか
 - https://reactjs.org/docs/introducing-jsx.html
