@@ -83,3 +83,7 @@ export default App;
 ## Webpack 
 - JSXコードwebpackによってbundle.jsへ変換される
 - HTMLではscriptタグでbundle.
+
+## Props
+- 関数の引数
+
