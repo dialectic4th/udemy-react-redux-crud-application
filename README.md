@@ -79,3 +79,7 @@ class App extends Component{
 }
 export default App;
 ```
+
+## Webpack 
+- JSXコードwebpackによってbundle.jsへ変換される
+- HTMLではscriptタグでbundle.
