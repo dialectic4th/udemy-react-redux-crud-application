@@ -1,0 +1,150 @@
+Redux
+Componentの階層が
+深くなった際に状態を共有するためのもの。
+
+最初は覚えることが多いけど
+慣れれば可読性の高いコードが書けるようになる
+
+$ git checkout -b redux-basic
+$ yarn add redux react-redux
+$ mkdir src/actions
+$ touch src/actions/index.js
+$ mkdir src/reducers
+$ touch src/reducers/index.js
+$ touch src/reducers/count.js
+$ 
+
+src/actions/index.js
+
+export const INCREMENT = export ‘INCREMENT’
+const DECREMENT = ‘DECREMENT’
+
+export const increment = () => ({		type: ‘INCREMENT’
+})
+
+export const decrement = () =>  ({	type: ‘DECREMENT’
+})
+
+インクリメント
+デクリメント
+JSのオブジェクト
+Type：Value
+actionを返す関数action creater
+export 
+Viewを担当するコンポーネントでインポートし、あるイベントを掴んだ時にactionCreaterをインボークして、
+適切な状態遷移を実行させるための、
+仕組み。
+
+
+
+
+
+###reducers/Index.js
+import { combineReducers } from ‘redux’
+import count from ‘./count’
+
+export default combineReduers({count})
+
+
+
+
+
+###reducers/count.js
+import { INCREMENT, DECREMENT} from ‘../actions’
+
+const initialState = { value: 0 }
+
+export default {state = initialState, action} => {
+	switch (action.type){
+		//actionのtypeはインクリメントでクリ面との2タイプをとる。
+		//未定義、初期起動時の処理も必要
+		case INCREMENT:
+			return { value : state.value + 1}
+		case DECREMENT:
+			return { value : state.value - 1}
+		default:
+			return state
+	}
+}
+
+
+
+
+今回はReducerが一つだが基本は複数になる（複数の引数を持つ）
+
+
+
+
+Reducerを元にStoreを作成
+Storeを全コンポーネントで使えるようにする。(provider)
+
+$ mkdir src/components
+$ git mv src/App.js src/components/
+
+
+src/index.js
+追加する。
+import { createStore} from ‘redux’
+import { Provider } from ‘react-redux’
+
+import reducer from ‘./reducers’
+import App from ‘./components/App’
+
+(中略)
+
+const store = createStore(reducer)
+ReactDOM.render(
+	<Provider store={store}>
+	</Provider>
+	document.getElementById(‘root’)
+);
+registerServiceWorker();
+
+
+
+渡したいデータがあったときに
+データをオブジェクト階層で引き継ぐ必要があった。
+ReduxのProviderがこれを解決してくれる
+
+（ここまででも以前と同じようにHTMLが表示される。）
+
+src/components/App.js
+
+import {connect} from ‘react-redux’
+
+
+const App を削除
+
+import { increment, decrement} from ‘../actions’
+
+
+constructorを削除
+
+
+render(){
+	const props = this.pros
+	return (
+		<>
+		<div >value: { props.value }</div>
+		<button onCLick={props.increment}>+1</button>
+		<button onCLick={props.decrement}>+1</button>
+	)
+}
+
+
+}
+
+
+根本的に書き方のルール怪しい
+関数名　引数　戻り値、()=> 
+
+const mapStateToProps  = state => ({ value: state.count.value }) 
+
+const mapDispatchToProps = dispatch =>({
+	increment: () => dispatch(increment()),
+	dencrement: () => dispatch(decrement()),
+})
+
+//const mapDispatchToProps = ({ increment, decrement})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
